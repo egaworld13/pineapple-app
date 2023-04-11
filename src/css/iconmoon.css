@@ -1,0 +1,131 @@
+:root {
+  --blue-1: #4066a5;
+  --blue-2: #4066a54d;
+  --white-2: #e3e3e4;
+  --space-1: -1.5em;
+  --space-2: -1.128em;
+}
+@font-face {
+  font-family: "icomoon";
+  src: url("/fonts/icomoon.eot?ednqh7");
+  src: url("/fonts/icomoon.eot?ednqh7#iefix") format("embedded-opentype"),
+    url("/fonts/icomoon.ttf?ednqh7") format("truetype"),
+    url("/fonts/icomoon.woff?ednqh7") format("woff"),
+    url("/fonts/icomoon.svg?ednqh7#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* *** SUCCES ICON *** */
+.icon-success {
+  display: inline-block;
+  font-size: 7rem;
+  margin-bottom: 3rem;
+}
+.icon-success .path1 {
+  content: "\e900";
+  color: var(--blue-1);
+}
+.icon-success .path2 {
+  margin-left: var(--space-2);
+  content: "\e901";
+  color: var(--blue-1);
+}
+.icon-success .path3 {
+  content: "\e902";
+  margin-left: var(--space-2);
+  color: var(--blue-2);
+}
+.icon-success .path4 {
+  content: "\e903";
+  margin-left: var(--space-2);
+  color: var(--blue-2);
+}
+.icon-success .path5 {
+  content: "\e904";
+  margin-left: var(--space-2);
+  color: var(--blue-2);
+}
+.icon-success .path6 {
+  content: "\e905";
+  margin-left: var(--space-2);
+  color: var(--blue-2);
+}
+.icon-success .path7 {
+  content: "\e906";
+  margin-left: var(--space-2);
+  color: var(--blue-2);
+}
+
+/**** FACEBOOK ****/
+.icon-facebook .path1 {
+  content: "\e907";
+  color: var(--white-2);
+}
+.icon-facebook .path2 {
+  content: "\e90e";
+  margin-left: var(--space-1);
+}
+
+/**** INSTAGRAM ****/
+.icon-instagram .path1 {
+  content: "\e908";
+  color: var(--white-2);
+}
+.icon-instagram .path2 {
+  content: "\e90f";
+  margin-left: var(--space-1);
+}
+
+/**** YOUTUBE ****/
+.icon-youtube .path1 {
+  content: "\e90a";
+  color: var(--white-2);
+}
+.icon-youtube .path2 {
+  content: "\e910";
+  margin-left: var(--space-1);
+}
+
+/**** TWITTER ****/
+.icon-twitter .path1 {
+  content: "\e90b";
+  color: var(--white-2);
+}
+.icon-twitter .path2 {
+  content: "\e911";
+  margin-left: var(--space-1);
+}
+
+/**** ARROW BTN ****/
+.icon-r-arrow {
+  content: "\e90c";
+}
+
+/**** PINEAPPLE ICON****/
+.icon-pineapple {
+  content: "\e909";
+  color: var(--blue-1);
+}
+
+/**** CHECKMAR FOR CHECKBOX****/
+.icon-checkmark {
+  content: "\e90d";
+}

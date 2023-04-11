@@ -1,0 +1,435 @@
+:root {
+  /**** BASE COLORS ****/
+  --blue: #4066a5;
+  --white: #fff;
+  --text-color: #6a707b;
+  --text-color-dark: #131821;
+  --link-active: #233759;
+  --white-2: #e3e3e4;
+  --error: #b80808;
+  --email-input-shadow: rgba(19, 24, 33, 0.06);
+
+  /* HOVER SOC ICON */
+  --facebook-h: #4066a5;
+  --instagram-h: #c13584;
+  --twitter-h: #1da1f2;
+  --youtube-h: #ff0000;
+
+  /* ACTIVE SOC ICONS */
+  --facebook-a: #2f4a80;
+  --instagram-a: #8f2762;
+  --twitter-a: #177fbf;
+  --youtube-a: #cc0000;
+
+  /**** SPACEING ****/
+  --font-14-16: clamp(1.4rem, calc(1.34rem + 0.13vw), 1.6rem);
+  --font-24-32: clamp(2.4rem, calc(2.2rem + 0.52vw), 3.2rem);
+
+  --space-10-15: clamp(1rem, calc(0.84rem + 0.39vw), 1.5rem);
+  --space-10-100: clamp(1rem, calc(-2rem + 6.35vw), 10rem);
+  --space-15-20: clamp(1.5rem, 2vw, 2rem);
+  --space-15-41: clamp(1.5rem, 2.2vw, 4.1rem);
+  --space-20-50: clamp(2rem, calc(1.26rem + 1.94vw), 5rem);
+  --space-20-100: clamp(2rem, calc(-0.92rem + 5.69vw), 10rem);
+  --space-20-140: clamp(2rem, calc(-0.92rem + 7.77vw), 14rem);
+  --space-30-243: clamp(3rem, calc(-2.17rem + 13.79vw), 24.3rem);
+  --space-188-234: clamp(18.8rem, calc(17.68rem + 2.98vw), 23.4rem);
+  --space-295-670: clamp(29.5rem, calc(14rem + 27.2vw), 66.2rem);
+  --space-336-680: clamp(33.6rem, calc(25.7rem + 22.1vw), 68rem);
+}
+
+/***********************/
+/* General settings */
+/***********************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: normal 400 1.6rem/1rem "Arial", sans-serif;
+}
+
+a:link {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/***********************/
+/* GRID AND MAIN */
+/***********************/
+.grid-container {
+  width: min(100%, 192rem);
+  min-height: 100vh;
+
+  margin: 0 auto;
+  overflow-x: hidden;
+
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+}
+
+.main {
+  height: max(100vh, 100%);
+  width: var(--space-336-680);
+  background: linear-gradient(180deg, var(--white) 0%, #f2f5fa 100%);
+}
+
+/***********************/
+/* ASIDE IMAGE */
+/***********************/
+.aside {
+  height: max(100vh, 100%);
+  width: min(100vw, 124rem);
+}
+
+.pineaple-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/***********************/
+/* HEADER*/
+/***********************/
+.header {
+  width: min(100%, 100vw);
+  padding-top: var(--space-10-100);
+  padding-right: var(--space-20-100);
+  padding-left: var(--space-20-100);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: end;
+  gap: 1.5rem;
+}
+
+.icon-pineapple {
+  font-size: 4rem;
+}
+
+.logo-name {
+  font: 1.7rem/2.6rem "Arial";
+  color: var(--text-color-dark);
+}
+
+.main-nav {
+  display: flex;
+  align-items: end;
+  line-height: 2.6rem;
+}
+
+.main-nav-list {
+  font: var(--font-14-15) / 2.6rem "Arial";
+  display: flex;
+  align-items: end;
+  gap: 3rem;
+}
+
+.main-nav-link a:link,
+.main-nav-link a:visited {
+  color: var(--text-color);
+}
+
+.main-nav-link a:hover {
+  text-decoration: underline;
+  color: var(--blue);
+}
+
+.main-nav-link a:active {
+  text-decoration: underline;
+  color: var(--link-active);
+}
+
+/***********************/
+/* CONTENT CONTAINER*/
+/***********************/
+.section-subscribe {
+  margin-top: var(--space-188-234);
+  padding-right: var(--space-20-140);
+  padding-left: var(--space-20-140);
+}
+.section-subscribe.spaceing-top {
+  margin-top: 12.9rem;
+}
+
+/**** TITLE CONTAINER ****/
+.subscribe-title {
+  font: 400 var(--font-24-32) / 4.4rem "Georgia", Arial;
+  margin-bottom: var(--space-10-15);
+  color: var(--text-color-dark);
+}
+
+.text-container {
+  margin-bottom: var(--space-20-50);
+}
+
+.subtext {
+  font: normal 400 var(--font-14-16) / 2.8rem "Arial";
+  color: var(--text-color);
+}
+
+/**** EMAIL INPUT CONTAINER ****/
+.form {
+  max-width: 40rem;
+  margin-bottom: var(--space-20-50);
+}
+
+.email-input {
+  height: 7rem;
+  width: var(--space-295-670);
+
+  transform: translateX(-4rem);
+
+  display: flex;
+
+  border: 1px solid var(--white-2);
+  border-left: 4px solid var(--blue);
+  background-color: var(--white);
+}
+
+.email-input:focus-within {
+  border-left: 4px solid var(--blue);
+  box-shadow: 0rem 3rem 4rem rgba(19, 24, 33, 0.06);
+}
+
+.email-input:hover {
+  border: 1px solid var(--blue);
+  border-left: 4px solid var(--blue);
+  box-shadow: 0 3rem 4rem rgba(19, 24, 33, 0.06);
+}
+
+.email-input:hover .icon-r-arrow {
+  color: var(--blue);
+}
+
+.email {
+  margin-left: var(--space-15-41);
+  flex-grow: 1;
+  border: none;
+  caret-color: var(--text-color-dark);
+}
+
+.email::placeholder {
+  font: 1.6rem/1rem "Arial";
+  color: var(--text-color);
+}
+
+.email:focus {
+  outline: none;
+}
+
+.email-btn {
+  width: min(14%, 8.3rem);
+  padding-right: var(--space-15-20);
+  border: none;
+  cursor: pointer;
+  background-color: var(--white);
+}
+
+.icon-r-arrow {
+  font-size: 1.4rem;
+  color: rgba(19, 24, 33, 0.3);
+}
+
+/**** ERROR MSG ****/
+.error-msg {
+  transform: translateX(-4rem);
+  height: clamp(2rem, calc(1.2rem + 2.14vw), 5.3rem);
+  display: inline-block;
+  font: normal 700 1.2rem/ 1.8rem "Arial";
+  color: var(--error);
+}
+.error-border {
+  border: 1px solid var(--error);
+  border-left: 4px solid var(--error);
+}
+.error-border:focus-within {
+  border-left: 4px solid var(--error);
+}
+.error-border:hover {
+  border: 1px solid var(--error);
+  border-left: 4px solid var(--error);
+}
+
+.error-border:hover .icon-r-arrow {
+  color: rgba(19, 24, 33, 0.3);
+}
+
+/**** CHECKBOX CONTAINER ****/
+
+.checkbox-container label {
+  width: max-content;
+  cursor: pointer;
+
+  display: flex;
+  gap: 1.5rem;
+}
+
+.checkbox-container input[type="checkbox"] {
+  position: absolute;
+
+  cursor: pointer;
+  opacity: 0;
+}
+
+.checkbox-container label::before {
+  content: "";
+  height: 2.4rem;
+  width: 2.4rem;
+
+  background: var(--white);
+  border: 1px solid var(--white-2);
+  border-radius: 3px;
+}
+
+.checkbox-container input[type="checkbox"]:checked + label::before {
+  content: "\e90d";
+  font-size: 3rem;
+
+  color: var(--white);
+  border: 1px solid var(--blue);
+  background: var(--blue);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.terms-text {
+  font: normal 1.6rem/2.8rem "Arial";
+  color: var(--text-color);
+}
+
+.terms-text a:link,
+.terms-text a:visited {
+  text-decoration: underline;
+  color: var(--text-color-dark);
+}
+
+.terms-text a:hover {
+  color: var(--blue);
+}
+
+.terms-text a:active {
+  color: var(--link-active);
+}
+
+/***********************/
+/* SOCIAL LINKS */
+/***********************/
+.social-links {
+  border-top: 1px solid var(--white-2);
+}
+.link .path2 {
+  color: rgba(19, 24, 33, 0.3);
+}
+
+.soical-icons {
+  margin-top: var(--space-20-50);
+  padding-bottom: var(--space-30-243);
+  font-size: 4.6rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/**** HOVER ****/
+.link a:hover {
+  border-radius: 50%;
+  box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+}
+
+.link a:hover .path2 {
+  color: var(--white);
+}
+
+/* FACEBOOK */
+.icon-facebook a:hover {
+  background-color: var(--facebook-h);
+}
+
+.icon-facebook a:hover .path1 {
+  color: var(--facebook-h);
+}
+
+/* INSTAGRAM */
+.icon-instagram a:hover {
+  background-color: var(--instagram-h);
+}
+
+.icon-instagram a:hover .path1 {
+  color: var(--instagram-h);
+}
+
+/* TWITTER */
+.icon-twitter a:hover {
+  background-color: var(--twitter-h);
+}
+
+.icon-twitter a:hover .path1 {
+  color: var(--twitter-h);
+}
+
+/* YOUTUBE */
+.icon-youtube a:hover {
+  background-color: var(--youtube-h);
+}
+
+.icon-youtube a:hover .path1 {
+  color: var(--youtube-h);
+}
+
+/**** ACTIVE ****/
+
+/* FACEBOOK */
+.icon-facebook a:active {
+  background-color: var(--facebook-a);
+}
+
+.icon-facebook a:active .path1 {
+  color: var(--facebook-a);
+}
+
+/* INSTAGRAM */
+.icon-instagram a:active {
+  background-color: var(--instagram-a);
+}
+
+.icon-instagram a:active .path1 {
+  color: var(--instagram-a);
+}
+
+/* TWITTER */
+.icon-twitter a:active {
+  background-color: var(--twitter-a);
+}
+
+.icon-twitter a:active .path1 {
+  color: var(--twitter-a);
+}
+
+/* YOUTUBE */
+.icon-youtube a:active {
+  background-color: var(--youtube-a);
+}
+
+.icon-youtube a:active .path1 {
+  color: var(--youtube-a);
+}
